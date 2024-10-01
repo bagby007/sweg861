@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 const createAccount = (email, password, callback) => {
+    
     fetch('http://localhost:3080/auth', {
         method: 'POST',
         headers: {
@@ -52,7 +53,7 @@ const AccountCreation = () => {
             createAccount(email, password, (success) => {
                 if (success) {
                     window.alert('Account created successfully!');
-                    navigate('/profile')
+                    navigate('/profile', { state: { email } });
                 }
             });
         }

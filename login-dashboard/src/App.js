@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Welcome from './pages/welcome'
 import Login from './pages/login'
 import Account from './pages/account'
-import Survey from './pages/survey'
+import Settings from './pages/settings'
 import Profile from './pages/profile'
 import './App.css'
 import { useEffect, useState } from 'react'
@@ -38,7 +38,7 @@ function App() {
             <Route path="/" element={<Welcome/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/account" element={<Account/>}/>
-            <Route path="/survey" element={<Survey/>}/>
+            <Route path="/settings" element={<Settings/>}/>
             <Route path="/profile" element={<Profile/>}/>
         </Routes>
         </BrowserRouter>
